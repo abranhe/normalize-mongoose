@@ -22,12 +22,12 @@ $ npm install abranhe@normalize-mongoose
 import mongoose from 'mongoose';
 import normalize from 'normalize-mongoose';
 
-const pesonSchema = mongoose.Schema({    
+const personSchema = mongoose.Schema({    
     name: String,
     age: Number,
 });
 
-pesonSchema.plugin(normalize);
+personSchema.plugin(normalize);
 ```
 
 See how `normalize-mongoose` will clean the the JSON output:
@@ -57,16 +57,16 @@ See how `normalize-mongoose` will clean the the JSON output:
 import mongoose from 'mongoose';
 import normalize from 'normalize-mongoose';
 
-const pesonSchema = mongoose.Schema({    
+const personSchema = mongoose.Schema({    
     name: String,
     age: Number,
     email: String,
     password: { type: String, private: true },
 });
 
-pesonSchema.plugin(normalize);
+personSchema.plugin(normalize);
 
-const Person = mongoose.model('Person', pesonSchema);
+const Person = mongoose.model('Person', personSchema);
 const someone = new Person( {
   name: 'Abraham',
   age: 33,

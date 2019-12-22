@@ -1,6 +1,6 @@
 {
   "name": "normalize-mongoose",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "description": "Normalize Mongoose JSON output",
   "license": "MIT",
   "repository": "abranhe/normalize-mongoose",

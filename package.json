@@ -1,0 +1,38 @@
+{
+  "name": "normalize-mongoose",
+  "version": "0.0.1-alpha",
+  "description": "Normalize Mongoose JSON output",
+  "license": "MIT",
+  "repository": "abranhe/normalize-mongoose",
+  "homepage": "https://p.abranhe.com/normalize-mongoose",
+  "author": {
+    "name": "Abraham Hernandez",
+    "email": "abraham@abranhe.com",
+    "url": "https://abranhe.com"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [ "index.js" ],
+  "keywords": [
+    "mongoose",
+    "normalize",
+    "normalize-mongoose",
+    "plugin",
+    "mongoose-plugin"
+  ],
+  "devDependencies": {
+    "ava": "^2.2.0",
+    "mongoose": "^5.8.2",
+    "xo": "^0.24.0",
+    "mongodb-memory-server": "^6.1.1"
+  },
+  "xo": {
+    "rules": {
+      "new-cap": 0
+    }
+  }
+}

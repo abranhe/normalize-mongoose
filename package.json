@@ -26,7 +26,7 @@
   ],
   "devDependencies": {
     "ava": "^3.15.0",
-    "mongoose": "^5.8.2",
+    "mongoose": "^6.0.3",
     "xo": "^0.44.0",
     "mongodb-memory-server": "^7.2.0"
   },

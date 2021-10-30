@@ -1,4 +1,8 @@
-# normalize-mongoose [![Build Status](https://travis-ci.com/abranhe/normalize-mongoose.svg)](https://travis-ci.com/abranhe/normalize-mongoose) [![GH Status](https://github.com/abranhe/normalize-mongoose/workflows/build/badge.svg)](https://github.com/abranhe/normalize-mongoose/actions) [![NPM](https://img.shields.io/npm/v/normalize-mongoose)](https://npmjs.org/normalize-mongoose)
+# normalize-mongoose
+
+[![GH Status](https://github.com/abranhe/normalize-mongoose/workflows/build/badge.svg)](https://github.com/abranhe/normalize-mongoose/actions)
+[![NPM](https://img.shields.io/npm/v/normalize-mongoose)](https://npmjs.org/normalize-mongoose)
+[![License](https://img.shields.io/npm/l/normalize-mongoose)](https://npmjs.org/normalize-mongoose)
 
 > Normalize Mongoose JSON output
 
@@ -22,7 +26,7 @@ $ npm install abranhe@normalize-mongoose
 import mongoose from 'mongoose';
 import normalize from 'normalize-mongoose';
 
-const personSchema = mongoose.Schema({    
+const personSchema = mongoose.Schema({
     name: String,
     age: Number,
 });
@@ -57,7 +61,7 @@ See how `normalize-mongoose` will clean the the JSON output:
 import mongoose from 'mongoose';
 import normalize from 'normalize-mongoose';
 
-const personSchema = mongoose.Schema({    
+const personSchema = mongoose.Schema({
     name: String,
     age: Number,
     email: String,

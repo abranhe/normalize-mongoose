@@ -7,15 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node_version: [12, 14]
+        node_version: [14, 16]
 
     steps:
-    - uses: actions/checkout@master
-    - name: Use Node.js ${{ matrix.node_version }}
-      uses: actions/setup-node@v1
-      with:
-        version: ${{ matrix.node_version }}
-    - name: Test
-      run: |
-        npm install
-        npm test
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          version: ${{ matrix.node_version }}
+      - name: Test
+        run: yarn && yarn test

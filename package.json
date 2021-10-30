@@ -1,6 +1,6 @@
 {
   "name": "normalize-mongoose",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Normalize Mongoose JSON output",
   "license": "MIT",
   "repository": "abranhe/normalize-mongoose",
@@ -16,7 +16,7 @@
   "scripts": {
     "test": "xo && ava"
   },
-  "files": [ "index.js" ],
+  "files": [ "index.js", "index.d.ts" ],
   "keywords": [
     "mongoose",
     "normalize",

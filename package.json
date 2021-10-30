@@ -10,6 +10,7 @@
 		"email": "abraham@abranhe.com",
 		"url": "https://abranhe.com"
 	},
+	"type": "module",
 	"engines": {
 		"node": ">=12"
 	},

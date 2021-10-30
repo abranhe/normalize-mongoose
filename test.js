@@ -1,17 +1,17 @@
 import test from 'ava';
 import mongoose from 'mongoose';
-import mms from 'mongodb-memory-server';
-import nm from '.';
+import {MongoMemoryServer} from 'mongodb-memory-server';
+import nm from './index.js';
 
 test('Main', async t => {
-	const mongodb = new mms();
-	mongoose.connect(await mongodb.getConnectionString(), {useNewUrlParser: true});
+	const mongodb = await MongoMemoryServer.create();
+	mongoose.connect(mongodb.getUri(), {useNewUrlParser: true});
 
 	const personSchema = mongoose.Schema({
 		name: String,
 		age: Number,
 		email: String,
-		password: {type: String, private: true}
+		password: {type: String, private: true},
 	});
 
 	personSchema.plugin(nm);
@@ -24,7 +24,7 @@ test('Main', async t => {
 		name: 'Abraham',
 		age: 7,
 		email: 'email@example.com',
-		password: 'my_awesome_password'
+		password: 'my_awesome_password',
 	});
 
 	someone.save();
@@ -34,7 +34,7 @@ test('Main', async t => {
 	const expected = {
 		age: 7,
 		email: 'email@example.com',
-		name: 'Abraham'
+		name: 'Abraham',
 	};
 
 	t.deepEqual(result, {...expected, id: result.id});

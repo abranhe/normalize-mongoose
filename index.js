@@ -1,4 +1,4 @@
-const normalizeMongoose = schema => {
+module.exports = schema => {
 	const {
 		toJSON,
 		normalizeId,
@@ -44,5 +44,3 @@ const normalizeMongoose = schema => {
 
 	schema.options.toJSON = {...toJSON, ...json};
 };
-
-export default normalizeMongoose;
